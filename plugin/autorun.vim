@@ -1,4 +1,5 @@
 "AutoCompile/Execute
+" Idea taken by: gitlab.com/awerito <3
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
     exec "w"
