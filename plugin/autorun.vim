@@ -1,6 +1,7 @@
 "AutoCompile/Execute
 " Idea taken by: gitlab.com/awerito <3
 map <F5> :call CompileRunGcc()<CR>
+
 func! CompileRunGcc()
     exec "w"
     if &filetype == 'c'
@@ -26,6 +27,8 @@ func! CompileRunGcc()
         exec "!brave-browser %.html &"
     elseif &filetype == 'javascript'
         exec "!time node %"
+    elseif &filetype == 'matlab'
+        exec "!time octave %"
     endif
 endfunc
 
